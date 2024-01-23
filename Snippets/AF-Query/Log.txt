@@ -1,0 +1,13 @@
+# Check command "Invoke-AzOperationalInsightsQuery"
+traces
+| project
+    timestamp,
+    message,
+    severityLevel,
+    itemType,
+    cloud_RoleName,
+    operation_Name,
+    operation_Id
+| where timestamp > ago(30d)
+| where cloud_RoleName =~ 'MILEMATEDD-AF-PROD-VDMSupportApi' and operation_Name =~ 'ValidateExcel' and operation_Id =~ '74ce75b18f1710cdc6bf517d76125031'
+| order by timestamp desc

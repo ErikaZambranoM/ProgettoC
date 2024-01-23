@@ -1,0 +1,2 @@
+// Modified command line to include Profile, Script name, and Process ID
+return `& {Start-Process ${o(e)}${s} -ArgumentList '${a} -ExecutionPolicy Unrestricted -Command cd ${o(n)} ; Write-Host "Script: ${o(r).split('\\').pop()}\`nProcess: $PID" -ForegroundColor Yellow ; Pause; Write-Host ""; & ${o(r)}'}`

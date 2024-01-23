@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SharePoint Online Contents Manager</title>
+
+<head>
+  <style>
+    body {
+      margin: 5px;
+    }
+
+
+    .Main_Container {
+      border: 5px solid #ccc;
+      box-sizing: border-box;
+      padding: 5px;
+      width: auto;
+      height: inherit;
+      border-radius: 12px;
+
+    }
+
+    .Loading_Container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translate(-50%, -50%);
+    }
+
+    .Loading_Spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #000;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+      display: inherit;
+    }
+
+    /* Main container for site buttons */
+    .Site_Buttons_Container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .SiteButtonsContainer a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    /* Individual button styles */
+    .Site_Button {
+      display: inline-flex;
+      background-color: transparent;
+      cursor: pointer;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 3px ridge #37c6d0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    /* Add left margin to every button except the first one */
+    .Site_Button:not(:first-child) {
+      margin-left: 15px;
+      /* or whatever spacing you prefer */
+    }
+
+    /* Add right margin to every button except the last one */
+    .Site_Button:not(:last-child) {
+      margin-right: 15px;
+      /* or whatever spacing you prefer */
+    }
+
+    /* Disabled button styles */
+    .Site_Button.disabled {
+      opacity: 0.5;
+      cursor: text;
+      position: relative;
+    }
+
+    /* Hover text for disabled buttons */
+    .Site_Button.disabled::before {
+      display: none;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 5px;
+      border-radius: 3px;
+    }
+
+    .Site_Button.disabled:hover::before {
+      display: block;
+    }
+
+    .SiteButtonsIcons {
+      width: 35%;
+      height: 35%;
+    }
+
+    .Search_Box {
+      margin-bottom: 3px;
+    }
+
+    .Search_Box input {
+      padding: 2px;
+      padding-left: 6.5px;
+      border-radius: 8px;
+      border: 3px ridge #ccc;
+      box-sizing: border-box;
+      width: 100%;
+      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      font-size: medium;
+      font-weight: 600;
+
+    }
+
+    .Search_Box input:focus {
+      border: 3px ridge #37c6d0;
+      outline: none;
+    }
+
+    .SPO_Objects_Category_Buttons_Container {
+      position: relative;
+      white-space: nowrap;
+      display: flex;
+      font-family: Garamond, serif;
+      font-size: large;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .SPO_Objects_Category_Buttons_Lists:hover,
+    .SPO_Objects_Category_Buttons_Libraries:hover {
+      background: #1a9ba1;
+    }
+
+    .SPO_Objects_Category_Buttons_Lists:hover .SPO_Objects_Container,
+    .SPO_Objects_Category_Buttons_Libraries:hover .SPO_Objects_Container {
+      background: #036c70;
+      /*display: block;*/
+    }
+
+    .SPO_Objects_Category_Buttons_Lists {
+      background: #37c6d0;
+
+      position: relative;
+      border: 3px groove #ccc;
+      padding: 5px;
+    }
+
+
+    .SPO_Objects_Category_Buttons_Libraries {
+      background: #37c6d0;
+
+      position: relative;
+      border: 3px groove #ccc;
+      padding: 5px;
+      margin-left: 3px;
+    }
+
+    .PA_Objects_Category_Buttons_Flows {
+      background: #37c6d0;
+      position: relative;
+      border: 3px groove #ccc;
+      padding: 5px;
+      /*margin-left: 3px;*/
+    }
+
+    .SPO_Objects_Container {
+      position: absolute;
+      background: #038186;
+      border: 3px inset #ccc;
+      padding: 5px;
+      margin-top: 2.5px;
+      /*margin-bottom: 12.5px;*/
+      top: 100%;
+      white-space: nowrap;
+      /*display: flex;*/
+      flex-wrap: wrap;
+      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      font-size: small;
+      font-weight: 600;
+      display: block;
+
+    }
+
+    .PA_Objects_Container {
+      position: absolute;
+      background: #038186;
+      border: 3px inset #ccc;
+      padding: 5px;
+      margin-top: 2.5px;
+      /*margin-bottom: 12.5px;*/
+      top: 100%;
+      left: -2px;
+      white-space: nowrap;
+      /*display: flex;*/
+      flex-wrap: wrap;
+      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      font-size: small;
+      font-weight: 600;
+      display: block;
+
+    }
+
+    .SPO_Objects_Container_Lists {
+      left: -2px;
+    }
+
+    .SPO_Objects_Container_Libraries {
+      left: -2.5px;
+    }
+
+    .SPO_Object_Link {
+      background-color: #025456;
+      color: #fff;
+      border: 6px outset #037d85;
+      padding: 3px;
+      margin-top: 3px;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .SPO_Object_Link:hover {
+      background-color: #024547;
+    }
+
+    .PAFlow_Object_Link {
+      background-color: #025456;
+      color: #fff;
+      border: 6px outset #037d85;
+      padding: 3px;
+      margin-top: 3px;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .PAFlow_Object_Link:hover {
+      background-color: #024547;
+    }
+
+    .Hidden {
+      display: none;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading Container -->
+  <div id="Loading" class="Loading_Container Hidden">
+    <div id="LoadingSpinner" class="Loading_Spinner"></div>
+  </div>
+
+  <div id="MainContainer" class="Main_Container Hidden">
+
+    <!-- Site Buttons Container -->
+    <div id="SiteButtonsContainer" class="Site_Buttons_Container Hidden">
+      <a id="HomepageButton" title="Homepage" href="#" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/Homepage.png" /></a>
+      <a id="FavoritesButton" title="Coming soon" href="#" class="Site_Button disabled"><img class="SiteButtonsIcons"
+          src="../Icons/Favorites.png" /></a>
+      <a id="SiteSettingsButton" title="Site settings" href="#" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/SiteSettings.png" /></a>
+      <a id="SitePermissionsButton" title="Site permissions" href="#" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/SitePermissions.png" /></a>
+      <a id="RecycleBinButton" title="Recycle bin" href="#" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/RecycleBin.png" /></a>
+      <a id="SiteContentsButton" title="Site contents" href="#" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/SiteContents.png" /></a>
+      <button id="RefreshButton" title="Refresh" class="Site_Button"><img class="SiteButtonsIcons"
+          src="../Icons/Refresh.png" /></button>
+    </div>
+
+    <!-- Search Box Container -->
+    <div id="SearchBoxContainer" class="Search_Box Hidden">
+      <input type="text" id="SearchBox" placeholder="Search..." />
+    </div>
+
+    <div id="ButtonsContainer" class="SPO_Objects_Category_Buttons_Container Hidden">
+
+      <!-- Lists Button -->
+      <div id="ListsButton" class="SPO_Objects_Category_Buttons_Lists Hidden">Lists<div id="ListsContainer"
+          class="SPO_Objects_Container SPO_Objects_Container_Lists">
+          <!-- Lists Container -->
+          <!-- Lists will be populated here -->
+        </div>
+      </div>
+
+      <!-- Libraries Button -->
+      <div id="LibrariesButton" class="SPO_Objects_Category_Buttons_Libraries Hidden">Document Libraries<div
+          id="LibrariesContainer" class="SPO_Objects_Container SPO_Objects_Container_Libraries">
+          <!-- Libraries Container -->
+          <!-- Libraries will be populated here -->
+        </div>
+      </div>
+
+      <!-- Flows Button -->
+      <div id="FlowsButton" class="PA_Objects_Category_Buttons_Flows Hidden">Flows<div id="FlowsContainer"
+          class="PA_Objects_Container">
+          <!-- Flows Container -->
+          <!-- Flows will be populated here -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/PASPOR-Pop-up.js"></script>
+</body>
+
+</html>

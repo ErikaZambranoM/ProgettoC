@@ -1,0 +1,73 @@
+//VDM
+=LET(
+    Param_TableName_GenericFlows; "KEYS";
+    Param_ColumnName_GenericFlowNames; "FlowName";
+    Param_TableName_Flows; "Flows";
+    Param_ColumnName_FlowDisplayNames; "DisplayName";
+    Param_ColumnName_FlowUri; "TriggerUri";
+    Param_TableName_Sites; "Sites";
+    Param_ColumnName_SiteType; "Site Mode";
+
+    CurrentRow; ROW() - ROW(INDIRECT(Param_TableName_GenericFlows & "[#Headers]"));
+    ProjectCode; INDIRECT(ADDRESS(1; COLUMN()));
+    TriggerUriColumn; INDEX(INDIRECT(Param_TableName_Flows); 0; MATCH(Param_ColumnName_FlowUri; INDIRECT(Param_TableName_Flows & "[#Headers]"); 0));
+    FlowNameColumn; INDEX(INDIRECT(Param_TableName_Flows); 0; MATCH(Param_ColumnName_FlowDisplayNames; INDIRECT(Param_TableName_Flows & "[#Headers]"); 0));
+    SiteModeColumn; INDEX(INDIRECT(Param_TableName_Sites); 0; MATCH(Param_ColumnName_SiteType; INDIRECT(Param_TableName_Sites & "[#Headers]"); 0));
+
+    SiteModeString; INDEX(SiteModeColumn; MATCH(TEXT(ProjectCode; "0"); INDEX(INDIRECT(Param_TableName_Sites); 0; 1); 0));
+    SiteModeInteger; INDEX(SiteModeColumn; MATCH(VALUE(ProjectCode); INDEX(INDIRECT(Param_TableName_Sites); 0; 1); 0));
+
+    FlowNamePrefix; IFERROR(
+        IF(SiteModeString="KT"; "CKT_"; IF(SiteModeString="NXC"; "CNXC_"; IF(SiteModeString="STD"; "CMAIRE_"; "")));
+        IF(SiteModeInteger="KT"; "CKT_"; IF(SiteModeInteger="NXC"; "CNXC_"; IF(SiteModeInteger="STD"; "CMAIRE_"; "")))
+    );
+    GenericFlowName; INDEX(INDIRECT(Param_TableName_GenericFlows); CurrentRow; MATCH(Param_ColumnName_GenericFlowNames; INDIRECT(Param_TableName_GenericFlows & "[#Headers]"); 0));
+
+    IsB4Project; OR(ProjectCode="43P4"; ProjectCode="43U4"; ProjectCode="43X4");
+
+    Uri; IFERROR(
+        INDEX(TriggerUriColumn; MATCH("P" & ProjectCode & "_" & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0));
+        IFERROR(
+            INDEX(TriggerUriColumn; MATCH("P" & ProjectCode & "_" & IF(ISNUMBER(SEARCH("VDM Core -"; OFFSET(GenericFlowName; 0; 0))); SUBSTITUTE(OFFSET(GenericFlowName; 0; 0); "VDM Core -"; "VDM Project -"); SUBSTITUTE(OFFSET(GenericFlowName; 0; 0); "VDM Project -"; "VDM Core -")); FlowNameColumn; 0));
+            IF(IsB4Project; INDEX(TriggerUriColumn; MATCH("P4300_" & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0)); INDEX(TriggerUriColumn; MATCH(FlowNamePrefix & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0)))
+        )
+    );
+    Uri
+)
+
+//DD
+=LET(
+    Param_TableName_GenericFlows; "KEYS";
+    Param_ColumnName_GenericFlowNames; "FlowName";
+    Param_TableName_Flows; "Flows";
+    Param_ColumnName_FlowDisplayNames; "DisplayName";
+    Param_ColumnName_FlowUri; "TriggerUri";
+    Param_TableName_Sites; "Sites";
+    Param_ColumnName_SiteType; "Site Mode";
+
+    CurrentRow; ROW() - ROW(INDIRECT(Param_TableName_GenericFlows & "[#Headers]"));
+    ProjectCode; INDIRECT(ADDRESS(1; COLUMN()));
+    TriggerUriColumn; INDEX(INDIRECT(Param_TableName_Flows); 0; MATCH(Param_ColumnName_FlowUri; INDIRECT(Param_TableName_Flows & "[#Headers]"); 0));
+    FlowNameColumn; INDEX(INDIRECT(Param_TableName_Flows); 0; MATCH(Param_ColumnName_FlowDisplayNames; INDIRECT(Param_TableName_Flows & "[#Headers]"); 0));
+    SiteModeColumn; INDEX(INDIRECT(Param_TableName_Sites); 0; MATCH(Param_ColumnName_SiteType; INDIRECT(Param_TableName_Sites & "[#Headers]"); 0));
+
+    SiteModeString; INDEX(SiteModeColumn; MATCH(TEXT(ProjectCode; "0"); INDEX(INDIRECT(Param_TableName_Sites); 0; 1); 0));
+    SiteModeInteger; INDEX(SiteModeColumn; MATCH(VALUE(ProjectCode); INDEX(INDIRECT(Param_TableName_Sites); 0; 1); 0));
+
+    FlowNamePrefix; IFERROR(
+        IF(SiteModeString="KT"; "CKT_"; IF(SiteModeString="NXC"; "CNXC_"; IF(SiteModeString="STD"; "CMAIRE_"; "")));
+        IF(SiteModeInteger="KT"; "CKT_"; IF(SiteModeInteger="NXC"; "CNXC_"; IF(SiteModeInteger="STD"; "CMAIRE_"; "")))
+    );
+    GenericFlowName; INDEX(INDIRECT(Param_TableName_GenericFlows); CurrentRow; MATCH(Param_ColumnName_GenericFlowNames; INDIRECT(Param_TableName_GenericFlows & "[#Headers]"); 0));
+
+    IsB4Project; OR(ProjectCode="43P4"; ProjectCode="43U4"; ProjectCode="43X4");
+
+    Uri; IFERROR(
+        INDEX(TriggerUriColumn; MATCH("P" & ProjectCode & "_" & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0));
+        IFERROR(
+            INDEX(TriggerUriColumn; MATCH("P" & ProjectCode & "_" & IF(ISNUMBER(SEARCH("DD Core -"; OFFSET(GenericFlowName; 0; 0))); SUBSTITUTE(OFFSET(GenericFlowName; 0; 0); "DD Core -"; "DD Project -"); SUBSTITUTE(OFFSET(GenericFlowName; 0; 0); "DD Project -"; "DD Core -")); FlowNameColumn; 0));
+            IF(IsB4Project; INDEX(TriggerUriColumn; MATCH("P4300_" & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0)); INDEX(TriggerUriColumn; MATCH(FlowNamePrefix & OFFSET(GenericFlowName; 0; 0); FlowNameColumn; 0)))
+        )
+    );
+    Uri
+)

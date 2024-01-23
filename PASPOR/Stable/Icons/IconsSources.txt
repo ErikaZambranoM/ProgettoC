@@ -1,0 +1,20 @@
+Favorites:
+https://www.flaticon.com/free-icon/favorite_985709?page=1&position=1&term=favorites&origin=style-search&related_id=985709
+
+Homepage:
+https://www.flaticon.com/free-icon/home_1946488?term=home&page=1&position=1&origin=style&related_id=1946488
+
+Site Settings:
+https://www.flaticon.com/free-icon/gear_484664?term=settings&page=1&position=4&origin=style&related_id=484664
+
+Site Permsissions:
+https://www.flaticon.com/free-icon/user_1339831?term=permission&page=1&position=1&origin=style&related_id=1339831
+
+Recycle Bin:
+https://www.flaticon.com/free-icon/recycle_1390619?term=recycle+bin&page=1&position=2&origin=style&related_id=1390619
+
+SiteContents:
+https://www.flaticon.com/free-icon/folders_1061967
+
+Refresh:
+https://www.flaticon.com/free-icon/refresh_157948?term=refresh&page=1&position=2&origin=style&related_id=157948

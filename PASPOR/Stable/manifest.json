@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Power Automate & SharePoint Online Researcher",
+  "version": "2.0.2.0",
+  "description": "Retrieve Power Automate and SharePoint Online objects",
+  "action": {
+    "default_popup": "html/PASPOR-Pop-up.html",
+    "default_icon": {
+      "16": "Icons/PASPOR_Icon_16.png",
+      "48": "Icons/PASPOR_Icon_48.png",
+      "128": "Icons/PASPOR_Icon_128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Shift+Alt+S",
+        "mac": "Shift+Alt+S"
+      },
+      "description": "Opens the extension."
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "webNavigation",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "js/PASPOR-Pop-up-service-worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "Icons/PASPOR_Icon_16.png",
+    "48": "Icons/PASPOR_Icon_48.png",
+    "128": "Icons/PASPOR_Icon_128.png"
+  }
+}
