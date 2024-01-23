@@ -1,0 +1,58 @@
+Timestamp;Type;ListName;ID/Doc;Action;Key;Value;OldValue
+2023-12-12 15:39:54;[SUCCESS];Comment Status Report;11003;UPDATED
+Instrumentation: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:40:39;[SUCCESS];Comment Status Report;11003;UPDATED
+CheckCompleteness: 1
+Previous: 0
+2023-12-12 15:41:14;[SUCCESS];Comment Status Report;11003;UPDATED
+Machinery: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:41:55;[SUCCESS];Comment Status Report;11003;UPDATED
+Piping: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:42:43;[SUCCESS];Comment Status Report;11003;UPDATED
+Process: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:43:24;[SUCCESS];Comment Status Report;11003;UPDATED
+Process Control Automation: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:49:16;[SUCCESS];Comment Status Report;11008;UPDATED
+CheckCompleteness: 1
+Previous: 0
+2023-12-12 15:49:43;[SUCCESS];Comment Status Report;11012;UPDATED
+CheckCompleteness: 1
+Previous: 0
+2023-12-12 15:50:32;[SUCCESS];Comment Status Report;11008;UPDATED
+Instrumentation: 12;7;2023 5:00;Closed by the System
+Previous: To Do
+2023-12-12 15:51:01;[SUCCESS];Comment Status Report;11008;UPDATED
+Machinery: 12;7;2023 5:00;Closed by the System
+Previous: To Do
+2023-12-12 15:51:50;[SUCCESS];Comment Status Report;11008;UPDATED
+Piping: 12;7;2023 5:00;Closed by the System
+Previous: To Do
+2023-12-12 15:52:30;[SUCCESS];Comment Status Report;11008;UPDATED
+Process: 12;7;2023 5:00;Closed by the System
+Previous: To Do
+2023-12-12 15:53:12;[SUCCESS];Comment Status Report;11008;UPDATED
+Process Control Automation: 12;7;2023 5:00;Closed by the System
+Previous: To Do
+2023-12-12 15:54:42;[SUCCESS];Comment Status Report;11012;UPDATED
+CheckCompleteness: 1
+Previous: 0
+2023-12-12 15:55:37;[SUCCESS];Comment Status Report;11012;UPDATED
+Instrumentation: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:56:03;[SUCCESS];Comment Status Report;11012;UPDATED
+Machinery: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:56:38;[SUCCESS];Comment Status Report;11012;UPDATED
+Piping: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:57:05;[SUCCESS];Comment Status Report;11012;UPDATED
+Process: 11;23;2023 5:27;Closed by the System
+Previous: To Do
+2023-12-12 15:57:32;[SUCCESS];Comment Status Report;11012;UPDATED
+Process Control Automation: 11;23;2023 5:27;Closed by the System
+Previous: To Do

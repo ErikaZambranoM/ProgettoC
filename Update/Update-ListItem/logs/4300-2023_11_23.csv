@@ -1,0 +1,22 @@
+Timestamp;Type;ListName;ID/Doc;Action;Key;Value;OldValue
+2023-11-23 18:17:46;[SUCCESS];DocumentList;9885;UPDATED
+Is Current: True
+Previous: False
+2023-11-23 18:18:23;[SUCCESS];DocumentList;9885;UPDATED
+Is Current: False
+Previous: True
+2023-11-23 18:19:02;[SUCCESS];DocumentList;22410;UPDATED
+Is Current: True
+Previous: False
+2023-11-23 18:21:57;[SUCCESS];Client Document List;22410;UPDATED
+Is Current: True
+Previous: False
+2023-11-23 18:23:13;[SUCCESS];Client Document List;22410;UPDATED
+Is Current: False
+Previous: True
+2023-11-23 18:24:03;[SUCCESS];Client Document List;19151;UPDATED
+Is Current: True
+Previous: False
+2023-11-23 18:26:39;[SUCCESS];PP;Process Engineering;48442;UPDATED
+Is Current: True
+Previous: False

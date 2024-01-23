@@ -1,0 +1,12 @@
+Timestamp;Type;ListName;ID/Doc;Action;Key;Value;OldValue
+2023-12-05 13:10:56;[ERROR];DocumentList;37759;FAILED
+Document Status: Placeholder
+2023-12-05 13:12:17;[SUCCESS];DocumentList;37759;UPDATED
+Document Status: Latest
+Previous: Placeholder
+2023-12-05 13:13:48;[SUCCESS];DocumentList;37759;UPDATED
+Reason For Issue: Issued for COMPANY review
+Previous: PRELOADED
+2023-12-05 16:25:20;[SUCCESS];DocumentList;37759;UPDATED
+Reason For Issue: Issued for Company Review
+Previous: Issued for COMPANY review
