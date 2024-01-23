@@ -1,0 +1,149 @@
+"FlowRunName";"Status";"LocalStartTime";"LocalEndTime";"Trigger Property: @odata.etag";"Trigger Property: Author";"Trigger Property: Author#Claims";"Trigger Property: Created";"Trigger Property: Editor";"Trigger Property: Editor#Claims";"Trigger Property: ID";"Trigger Property: ItemInternalId";"Trigger Property: Modified";"Trigger Property: Title";"Trigger Property: VD_AGCCProcessFlowItemID";"Trigger Property: VD_AVDTNumber";"Trigger Property: VD_Body";"Trigger Property: VD_Cc";"Trigger Property: VD_CommunicationStatus";"Trigger Property: VD_CommunicationStatus#Id";"Trigger Property: VD_PONumber";"Trigger Property: VD_To";"Trigger Property: {ContentType}";"Trigger Property: {ContentType}#Id";"Trigger Property: {FilenameWithExtension}";"Trigger Property: {FullPath}";"Trigger Property: {HasAttachments}";"Trigger Property: {Identifier}";"Trigger Property: {IsFolder}";"Trigger Property: {Link}";"Trigger Property: {Name}";"Trigger Property: {Path}";"Trigger Property: {Thumbnail}";"Trigger Property: {TriggerWindowEndToken}";"Trigger Property: {TriggerWindowStartToken}";"Trigger Property: {VersionNumber}";"FlowRunLink";"FlowError"
+"08585023271243392425612082325CU25";"Succeeded";"11/6/2023 3:09:21 PM";"11/6/2023 3:09:26 PM";"""1""";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 8
+Month       : 11
+Second      : 30
+Ticks       : 638348765100000000
+TimeOfDay   : 14:08:30
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:08:30 PM";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"4893";"4893";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 8
+Month       : 11
+Second      : 30
+Ticks       : 638348765100000000
+TimeOfDay   : 14:08:30
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:08:30 PM";"document rejection";"13755";"-";"<p>Dear ABB SpA<br>Please be informed that revision AA of document 4355-NN-VD-PL1161060001 is rejected, cannot be furtherly processed and is discarded for the following reasons:</br> The date contain an unkown sybol. the nativa file is missing.<br><br>The submission is invalid and cannot be considered as achievement of any Contractual obligation. Please implement the required correction and resubmit with the same revision in the <a href='https://tecnimont.sharepoint.com/sites/vdm_4355/V_10866/7500116106/4355-NN-VD-PL1161060001-000'>folder</a>.</br><br>Kind regards</br>4355 - Ras Laffan HDPE Engineering Team
+</br></br>*** PLEASE DO NOT REPLY TO THIS E-MAIL ***</br>This is an automatic generated e-mail please do not respond to this e-mail, for any further clarification please refer to the agreed communication channel.</p>";"D.Lombardi@tecnimont.it;B.Aly@tecnimont.it;A.Gupta3@tecnimont.in;S.Singh4@tecnimont.in;N.Shinnib@tecnimont.it;M.Verzeri@tecnimont.it;A.Vishwakarma@tecnimont.in;A.Pai@tecnimont.in;R.Virardi@tecnimont.it;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference
+Id          : 0
+Value       : Ready";"0";"7500116106";"sharon-lu.huang@cn.abb.com;xiaofen.yang@cn.abb.com;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType
+Id          : 0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3
+Name        : Communication Register";"0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"document rejection";"Lists/CommunicationRegister/4893_.000";"False";"Lists%252fCommunicationRegister%252f4893_.000";"False";"https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/listform.aspx?PageType=4&ListId=db20d8a8%2De2d9%2D404c%2D9073%2Dc5fcfe7e9417&ID=4893&ContentTypeID=0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"document rejection";"Lists/CommunicationRegister/";"Large  : 
+Medium : 
+Small  :";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3NjU2MTIyNzAwMDA7NTgzMDMyNzI2";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3MDQxNTk2MzAwMDA7NTgzMDA4OTI2";"1.0";"https://make.powerautomate.com/environments/Default-7cc91888-5aa0-49e5-a836-22cda2eae0fc/flows/9e24eed3-0d6b-4f86-9a5d-8281b2c8c1a0/runs/08585023271243392425612082325CU25";"N/A"
+"08585023269200358670470742493CU29";"Succeeded";"11/6/2023 3:12:45 PM";"11/6/2023 3:12:51 PM";"""1""";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 11
+Month       : 11
+Second      : 34
+Ticks       : 638348766940000000
+TimeOfDay   : 14:11:34
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:11:34 PM";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"4894";"4894";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 11
+Month       : 11
+Second      : 34
+Ticks       : 638348766940000000
+TimeOfDay   : 14:11:34
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:11:34 PM";"comments to vendor document";"1358";"-";"<p>Dear Nesscoinvsat Limited<br>Please be informed that commented copy of document 4355-KK-VD-IS101480027 - AA relevant to PO 7500110148 is available <a href='https://tecnimont.sharepoint.com/sites/vdm_4355/V_72007/7500110148/4355-KK-VD-IS101480027-000'>here</a><br>This is the official notification, please proceed implementing eventual comments and resubmitting next revision whenever required.<br><br>Kind regards<br>4355 - Ras Laffan HDPE Engineering Team<br><br>*** PLEASE DO NOT REPLY TO THIS E-MAIL ***<br>This is an automatic generated e-mail please do not respond to this e-mail, for any further clarification please refer to the agreed communication channel<br></p>";"F.ALPEGIANI@tecnimont.it;S.Ferrieri@tecnimont.it;A.Pochintesta@tecnimont.it;L.Maccagni@tecnimont.it;T.Panchal@tecnimont.in;R.Galanti@tecnimont.it;A.Prajapati@tecnimont.in;;A.Kulkarni4@tecnimont.in;S.Vaidya3@tecnimont.in;H.Apte@tecnimont.in;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference
+Id          : 0
+Value       : Ready";"0";"7500110148";"Tony.Ardoin@viasat.com;Alison.Gordon@viasat.com;Maricel.Quipanes@Emerson.com;Purnima.Surti@Emerson.com;Alice.Wilson@viasat.com;x_zecale001@tecnimont.it;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType
+Id          : 0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3
+Name        : Communication Register";"0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"comments to vendor document";"Lists/CommunicationRegister/4894_.000";"False";"Lists%252fCommunicationRegister%252f4894_.000";"False";"https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/listform.aspx?PageType=4&ListId=db20d8a8%2De2d9%2D404c%2D9073%2Dc5fcfe7e9417&ID=4894&ContentTypeID=0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"comments to vendor document";"Lists/CommunicationRegister/";"Large  : 
+Medium : 
+Small  :";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3Njc2NTM4MDAwMDA7NTgzMDMzNzM0";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3NjYzMjk5MzAwMDA7NTgzMDMzMDY4";"1.0";"https://make.powerautomate.com/environments/Default-7cc91888-5aa0-49e5-a836-22cda2eae0fc/flows/9e24eed3-0d6b-4f86-9a5d-8281b2c8c1a0/runs/08585023269200358670470742493CU29";"N/A"
+"08585023256086920713219538395CU218";"Succeeded";"11/6/2023 3:34:37 PM";"11/6/2023 3:34:45 PM";"""1""";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 33
+Month       : 11
+Second      : 43
+Ticks       : 638348780230000000
+TimeOfDay   : 14:33:43
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:33:43 PM";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser
+Claims      : i:0#.f|membership|vendordocuments@tecnimont.it
+DisplayName : Vendor Documents
+Email       : VendorDocs@tecnimont.it
+Picture     : https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/UserPhoto.aspx?Size=L&AccountName=VendorDocs@tecnimont.it
+Department  : 
+JobTitle    :";"i:0#.f|membership|vendordocuments@tecnimont.it";"4895";"4895";"Date        : 11/6/2023 12:00:00 AM
+Day         : 6
+DayOfWeek   : Monday
+DayOfYear   : 310
+Hour        : 14
+Kind        : Utc
+Millisecond : 0
+Microsecond : 0
+Nanosecond  : 0
+Minute      : 33
+Month       : 11
+Second      : 43
+Ticks       : 638348780230000000
+TimeOfDay   : 14:33:43
+Year        : 2023
+DateTime    : Monday, November 6, 2023 2:33:43 PM";"comments to vendor document";"9317";"-";"<p>Dear BEST GROUP<br>Please be informed that commented copy of document 4355-LZ-VD-CT134600050 - AA relevant to PO 7500113460 is available <a href='https://tecnimont.sharepoint.com/sites/vdm_4355/V_73063/7500113460/4355-LZ-VD-CT134600050-000'>here</a><br>This is the official notification, please proceed implementing eventual comments and resubmitting next revision whenever required.<br><br>Kind regards<br>4355 - Ras Laffan HDPE Engineering Team<br><br>*** PLEASE DO NOT REPLY TO THIS E-MAIL ***<br>This is an automatic generated e-mail please do not respond to this e-mail, for any further clarification please refer to the agreed communication channel<br></p>";"F.Chitarin@tecnimont.it;G.DiBiase@tecnimont.it;M.Contiguglia@tecnimont.it;S.Candido@tecnimont.it;M.Frezzati@tecnimont.it;P.Casti@tecnimont.it;T.Chulpanova@qat.tcmbranch.com;R.Artar@qat.tcmbranch.com;G.Frangie@qat.tcmbranch.com;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference
+Id          : 0
+Value       : Ready";"0";"7500113460";"cfortinez@bestgroupqatar.com;";"@odata.type : #Microsoft.Azure.Connectors.SharePoint.SPListExpandedContentType
+Id          : 0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3
+Name        : Communication Register";"0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"comments to vendor document";"Lists/CommunicationRegister/4895_.000";"False";"Lists%252fCommunicationRegister%252f4895_.000";"False";"https://tecnimont.sharepoint.com/sites/vdm_4355/_layouts/15/listform.aspx?PageType=4&ListId=db20d8a8%2De2d9%2D404c%2D9073%2Dc5fcfe7e9417&ID=4895&ContentTypeID=0x0100F5362C8D27C16E47A1E3DF6D886EF19E0024C58F4EFCF5DA4096529ECA370C1AD3";"comments to vendor document";"Lists/CommunicationRegister/";"Large  : 
+Medium : 
+Small  :";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3ODA3NjE0MzAwMDA7NTgzMDM5MDE2";"MTszO2RiMjBkOGE4LWUyZDktNDA0Yy05MDczLWM1ZmNmZTdlOTQxNzs2MzgzNDg3NjgxNTk2MDAwMDA7NTgzMDMzOTM2";"1.0";"https://make.powerautomate.com/environments/Default-7cc91888-5aa0-49e5-a836-22cda2eae0fc/flows/9e24eed3-0d6b-4f86-9a5d-8281b2c8c1a0/runs/08585023256086920713219538395CU218";"N/A"

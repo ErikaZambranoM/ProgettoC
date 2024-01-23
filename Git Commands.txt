@@ -1,0 +1,34 @@
+<#
+    Per puntare a un file in root indicare solo il nome del file;
+    Mettere il nome/percorso tra virgolette se contiene spazi;
+#>
+
+#Aggiornare Git
+git -update git-for-windows
+
+# Comando per fare pull di un signolo folder/file (dal cloud) dal branch indicato al branch attivo (in locale)
+# Poi occorre fare push per copiare il contenuto sull'altro branch in cloud
+git checkout Dev -- path/file.ps1
+# Riscarica tutti i contenuti online
+git checkout origin/Dev -- .\
+
+# Riscarica il Repository (In pratica pulla/syncronizza tutto)
+git fetch origin
+# Annullare tutte le modifiche per non Committare/Pushare
+git reset --hard origin/Dev
+
+# Comando per fare "commit and push" di un singolo folder/file (da locale) dal branch attivo
+# Poi occorre fare push (che copierà in cloud solo i file committati)
+git commit -m "Comment message" -- path/file.ps1
+
+# Comando per annullare il pull se si blocca durante un merge conflict
+git merge --abort
+
+# Serie di comandi per pushare (dopo aver fatto git pull)
+git add *
+git commit -m "messaggio" #messaggio di commento
+git push
+
+
+# Installazione estensione per files maggiori di 100Mb
+git lfs install

@@ -1,0 +1,2 @@
+ListDisplayName;ColumnInternalName;Formula
+DocumentList;IssueIndex;"=if([$DepartmentCode] == 'INVALID', 'false', 'false')" 

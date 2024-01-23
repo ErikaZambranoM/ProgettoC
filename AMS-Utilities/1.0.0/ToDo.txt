@@ -1,0 +1,8 @@
+Get-SPOList:
+    1:
+        Check if -Columns parameter has not been called and throw error. If not specified at all, use 'Internal'
+        Permit running the function without connection param and use current connection context
+    2:
+        Loading list on site as DisplayName param suggestion?
+    3:
+        Add comment-based help
